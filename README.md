@@ -86,10 +86,4 @@ Untuk input/placeholder:
 ```
 Untuk data dinamis (testimoni), sediakan field `quote_en`, `name_en`, `role_en` di JSON.
 
-## 📝 Catatan
-
-- Token akses GitHub (PAT) sebaiknya di‑regenerate secara berkala.
-- Backend testimoni memiliki rate‑limit + honeypot anti‑spam.
-
----
 Dibuat dengan ☕ & ❤️ oleh Nug12 Dev
