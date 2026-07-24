@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id" data-lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema Pilihan — Nug12 Dev</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="style.css?v=27">
+    <link rel="stylesheet" href="themes-all.css?v=26">
+    <link rel="stylesheet" href="themes-gallery.css?v=5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    <script>try{const t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark");const l=localStorage.getItem("lang")||"id";document.documentElement.setAttribute("data-lang",l);document.documentElement.lang=l}catch(e){}</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-mug-hot"></i> Nug12 Dev
+        </div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="index.html#apps" data-text-id="Aplikasi" data-text-en="Applications">Aplikasi</a>
+                <a href="index.html#about" data-text-id="Tentang" data-text-en="About">Tentang</a>
+                <a href="index.html#contact" data-text-id="Kontak" data-text-en="Contact">Kontak</a>
+                <a href="index.html#testi" onclick="localStorage.setItem('openCerita','1')" data-text-id="Cerita" data-text-en="Stories">Cerita</a>
+                <a href="tema.html" class="active" style="color:var(--caramel-d)" data-text-id="Tema" data-text-en="Themes">Tema</a>
+            </div>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguageNow()" aria-label="Ubah bahasa"><i class="fa-solid fa-globe"></i> <span class="lang-text">ID</span></button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- THEMES GALLERY (halaman penuh) -->
+        <section class="themes-section" id="themes" style="padding-top:4vh">
+            <div class="themes-hero">
+                <div class="hero-logo"><i class="fa-solid fa-mug-hot"></i> <span class="sep">|</span> Tema Pilihan</div>
+                <p class="hero-sub">Klik <strong>Pakai</strong> untuk langsung melihat efeknya di seluruh halaman. Toggle <strong>🌙</strong> untuk ganti Light/Dark, <strong>Copy</strong> atau <strong>Unduh</strong> CSS-nya untuk dipakai di aplikasi lain.</p>
+            </div>
+            <div id="themesGrid"><!-- injected by themes-gallery.js --></div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="foot-brand">
+            <i class="fa-solid fa-mug-hot"></i> Nug12 Dev
+            <p>Kopi senja &amp; kode yang nyaman.</p>
+        </div>
+        <div class="foot-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="https://keuanganku.nug12.biz.id"><i class="fa-solid fa-wallet"></i> KeuanganKu</a>
+        </div>
+        <p class="copy">Made with <i class="fa-solid fa-heart"></i> &amp; ☕ by Nug12 Dev</p>
+    </footer>
+
+    <script src="themes-data.js?v=16" defer></script>
+    <script src="themes-gallery.js?v=16" defer></script>
+    <script src="lang.js?v=9" defer></script>
+    <script src="script.js?v=10" defer></script>
+</body>
+</html>

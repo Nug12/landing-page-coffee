@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Testi",
+    "name_en": "Testi",
+    "role": "User",
+    "role_en": "User",
+    "quote": "Landing page-nya hangat banget!",
+    "quote_en": "The landing page is really warm!",
+    "initial": "T",
+    "ts": 1784788601
+  },
+  {
+    "name": "Nugroho",
+    "name_en": "Nugroho",
+    "role": "Owner",
+    "role_en": "Owner",
+    "quote": "Form testi jalan, mantap!",
+    "quote_en": "The testimonial form works, great!",
+    "initial": "N",
+    "ts": 1784788676
+  },
+  {
+    "name": "Nugroho",
+    "name_en": "Nugroho",
+    "role": "Developer",
+    "role_en": "Developer",
+    "quote": "Menu Tema sudah ada dan bisa digunakan dengan copy css atau download css",
+    "quote_en": "The Themes menu is ready and can be used by copying or downloading the CSS",
+    "initial": "N",
+    "ts": 1784815912
+  }
+]

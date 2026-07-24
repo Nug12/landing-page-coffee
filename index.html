@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id" data-lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nug12 Dev — Kopi Senja & Kode</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="style.css?v=27">
+    <link rel="stylesheet" href="themes-all.css?v=26">
+    <link rel="stylesheet" href="themes-gallery.css?v=5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    <script>try{const t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark")}catch(e){}</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-mug-hot"></i> Nug12 Dev
+        </div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="#apps" data-text-id="Aplikasi" data-text-en="Applications">Aplikasi</a>
+                <a href="#about" data-text-id="Tentang" data-text-en="About">Tentang</a>
+                <a href="#contact" data-text-id="Kontak" data-text-en="Contact">Kontak</a>
+                <a href="#" id="ceritaMenu" data-text-id="Cerita" data-text-en="Stories">Cerita</a>
+                <a href="tema.html" data-text-id="Tema" data-text-en="Themes">Tema</a>
+            </div>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguageNow()" aria-label="Ubah bahasa"><span class="lang-text">ID</span></button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SPLIT -->
+        <section class="hero">
+            <div class="hero-text">
+                <span class="badge"><i class="fa-solid fa-sun"></i> Senja & Kode</span>
+                <h1 data-text-id="Kopi Senja, Kode yang Nyaman" data-text-en="Afternoon Coffee, Comfortable Code">Kopi Senja, <span class="accent">Kode yang Nyaman</span></h1>
+                <p class="lead" data-text-id="Kumpulan aplikasi buatan tangan yang saya bangun sambil menikmati hangatnya kopi di sore hari. Sederhana, cepat, dan bermanfaat." data-text-en="A collection of handcrafted applications I built while enjoying warm coffee in the afternoon. Simple, fast, and useful.">Kumpulan aplikasi buatan tangan yang saya bangun sambil menikmati hangatnya kopi di sore hari. Sederhana, cepat, dan bermanfaat.</p>
+                <div class="hero-cta">
+                    <a href="#apps" class="btn btn-primary" data-text-id="Jelajahi Aplikasi" data-text-en="Explore Apps"><i class="fa-solid fa-rocket"></i> Jelajahi Aplikasi</a>
+                    <a href="#about" class="btn btn-ghost" data-text-id="Tentang Saya" data-text-en="About Me"><i class="fa-solid fa-circle-info"></i> Tentang Saya</a>
+                </div>
+            </div>
+            <div class="hero-art">
+                <div class="art-card">
+                    <!-- Custom SVG coffee illustration -->
+                    <svg class="coffee-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Cangkir kopi senja">
+                        <defs>
+                            <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#E08E45"/>
+                                <stop offset="100%" stop-color="#A66A2A"/>
+                            </linearGradient>
+                            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#F5C77E"/>
+                                <stop offset="100%" stop-color="#E08E45"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- steam -->
+                        <g class="steam-g">
+                            <path class="steam-p" d="M85 40 q-8 -14 0 -28 q8 -14 0 -28" fill="none" stroke="#C8893F" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+                            <path class="steam-p" d="M100 36 q-8 -14 0 -28 q8 -14 0 -28" fill="none" stroke="#C8893F" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+                            <path class="steam-p" d="M115 40 q-8 -14 0 -28 q8 -14 0 -28" fill="none" stroke="#C8893F" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+                        </g>
+                        <!-- saucer -->
+                        <ellipse cx="100" cy="168" rx="62" ry="12" fill="#A66A2A" opacity=".25"/>
+                        <!-- cup body -->
+                        <path d="M58 78 H142 L134 150 Q132 162 120 162 H80 Q68 162 66 150 Z" fill="url(#cup)"/>
+                        <!-- cup inner -->
+                        <ellipse cx="100" cy="80" rx="42" ry="10" fill="#3B2A20"/>
+                        <ellipse cx="100" cy="80" rx="42" ry="10" fill="#5A463A" opacity=".4"/>
+                        <!-- handle -->
+                        <path d="M142 92 q34 4 30 34 q-4 26 -34 24" fill="none" stroke="#A66A2A" stroke-width="12" stroke-linecap="round"/>
+                        <!-- sunset circle on cup -->
+                        <circle cx="100" cy="84" r="14" fill="url(#sky)" opacity=".9"/>
+                    </svg>
+                    <p class="art-cap">Brewed with <i class="fa-solid fa-mug-hot"></i> &amp; &lt;code&gt;</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPS -->
+        <section class="apps" id="apps">
+            <h2 class="section-title" data-text-id="Aplikasi Saya" data-text-en="My Applications"><i class="fa-solid fa-layer-group"></i> Aplikasi Saya</h2>
+            <p class="section-sub" data-text-id="Klik untuk mencoba langsung" data-text-en="Click to try directly">Klik untuk mencoba langsung</p>
+            <div class="apps-grid" id="appsGrid"><!-- injected by script.js --></div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testi" id="testi">
+            <h2 class="section-title" data-text-id="Cerita Pengguna" data-text-en="User Stories"><i class="fa-solid fa-comments"></i> Cerita Pengguna</h2>
+            <p class="section-sub" data-text-id="Bagikan pengalamanmu" data-text-en="Share your experience"><i class="fa-solid fa-mug-hot"></i> Bagikan pengalamanmu</p>
+            <div class="testi-grid" id="testiGrid"><!-- injected by script.js --></div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="about-inner">
+                <h2 class="section-title" data-text-id="Tentang Saya" data-text-en="About Me"><i class="fa-solid fa-user"></i> Tentang Saya</h2>
+                <p data-text-id="Developer yang suka membuat aplikasi bermanfaat di waktu luang. Fokus pada tool praktis, antarmuka yang tenang, dan pengalaman yang tidak memusingkan." data-text-en="A developer who loves building useful apps in spare time. Focus on practical tools, calm interfaces, and non-confusing experiences.">Developer yang suka membuat aplikasi bermanfaat di waktu luang. Fokus pada tool praktis, antarmuka yang tenang, dan pengalaman yang tidak memusingkan.</p>
+                <div class="stats">
+                    <div class="stat"><span class="num"><i class="fa-solid fa-mug-hot"></i></span><span class="lbl">Kopi/hari</span></div>
+                    <div class="stat"><span class="num">∞</span><span class="lbl">Ide</span></div>
+                    <div class="stat"><span class="num">1</span><span class="lbl">VPS</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="foot-brand">
+            <i class="fa-solid fa-mug-hot"></i> Nug12 Dev
+            <p data-text-id="Kopi senja & kode yang nyaman." data-text-en="Afternoon coffee & comfortable code.">Kopi senja &amp; kode yang nyaman.</p>
+        </div>
+        <div class="foot-links">
+            <a href="https://nug12.biz.id" data-text-id="Home" data-text-en="Home"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="https://keuanganku.nug12.biz.id" data-text-id="KeuanganKu" data-text-en="KeuanganKu"><i class="fa-solid fa-wallet"></i> KeuanganKu</a>
+        </div>
+        <p class="copy" data-text-id="Made with ❤️ & ☕ by Nug12 Dev" data-text-en="Made with ❤️ & ☕ by Nug12 Dev">Made with <i class="fa-solid fa-heart"></i> &amp; <i class="fa-solid fa-mug-hot"></i> by Nug12 Dev</p>
+    </footer>
+
+
+    <!-- MODAL CERITA PENGGUNA -->
+    <div class="modal-overlay" id="ceritaModal" aria-hidden="true">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="ceritaTitle">
+            <button class="modal-close" id="ceritaClose" aria-label="Tutup">&times;</button>
+            <h3 id="ceritaTitle" data-text-id="Bagikan Ceritamu" data-text-en="Share Your Story"><i class="fa-solid fa-comments"></i> Bagikan Ceritamu <i class="fa-solid fa-mug-hot"></i></h3>
+            <form class="testi-form" id="testiForm" style="box-shadow:none;margin:0;padding:0;border:none;background:transparent">
+                <div class="form-row">
+                    <input type="text" id="tName" placeholder="Nama" maxlength="50" required>
+                    <input type="text" id="tRole" placeholder="Peran (mis. Developer)" maxlength="50">
+                </div>
+                <textarea id="tQuote" placeholder="Cerita kamu..." maxlength="600" required></textarea>
+                <input type="text" id="tHp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" data-text-id="Kirim" data-text-en="Send"><i class="fa-solid fa-paper-plane"></i> Kirim</button>
+                    <span class="form-msg" id="tMsg"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="themes-data.js?v=16" defer></script>
+    <script src="themes-gallery.js?v=16" defer></script>
+    <script src="lang.js?v=9" defer></script>
+    <script src="script.js?v=10" defer></script>
+</body>
+</html>
