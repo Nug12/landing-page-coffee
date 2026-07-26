@@ -88,11 +88,15 @@ fetch("apps.json?v=3")
         .catch(() => { clearTimeout(to); setDown(); });
     });
   })
-  .catch(() => { document.getElementById("appsGrid").innerHTML = '<p class="testi-empty">Gagal memuat aplikasi.</p>'; });
+  .catch(() => { 
+    const grid = document.getElementById("appsGrid");
+    if (grid) grid.innerHTML = '<p class="testi-empty">Gagal memuat aplikasi.</p>'; 
+  });
 
 // Testimonials
 const tg = document.getElementById("testiGrid");
 function renderTesti(list){
+  if (!tg) return; // Guard: testiGrid tidak ada (e.g., tema.html)
   const lang = document.documentElement.getAttribute("data-lang") || "id";
   if (!list || list.length === 0){
     tg.innerHTML = `
@@ -157,11 +161,12 @@ if (document.readyState === 'loading') {
 
 const form = document.getElementById("testiForm");
 const msg = document.getElementById("tMsg");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const payload = {
-    name: document.getElementById("tName").value,
-    role: document.getElementById("tRole").value,
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const payload = {
+      name: document.getElementById("tName").value,
+      role: document.getElementById("tRole").value,
     quote: document.getElementById("tQuote").value,
     hp: document.getElementById("tHp").value
   };
@@ -181,4 +186,8 @@ form.addEventListener("submit", (e) => {
     setTimeout(closeCerita, 900);
   })
   .catch(() => { msg.textContent = "❌ Gagal mengirim, coba lagi."; msg.style.color = "#c0392b"; });
-});
+  });
+}
+
+// Expose renderTesti ke global agar lang.js bisa panggil saat ganti bahasa
+window.renderTesti = renderTesti;
